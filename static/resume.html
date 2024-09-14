@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap; /* Preserve formatting of the resume text */
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Generated Resume</h1>
+    <pre id="generatedResume"></pre>
+    <script>
+        // Fetch the generated resume from localStorage and display it
+        const resume = localStorage.getItem('generated_resume');
+        if (resume) {
+            document.getElementById('generatedResume').textContent = resume;
+        } else {
+            document.getElementById('generatedResume').textContent = "No resume data available.";
+        }
+    </script>
+</body>
+</html>

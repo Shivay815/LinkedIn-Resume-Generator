@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <!-- Ensure the script points to the static folder -->
+    <script src="/static/script.js" defer></script> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resume Generator</h1>
+    <form id="resumeForm">
+        <label for="open_ai_key">OpenAI Key:</label>
+        <input type="text" id="open_ai_key" name="open_ai_key" required>
+
+        <label for="pdf_file">Upload LinkedIn PDF:</label>
+        <input type="file" id="pdf_file" name="pdf_file" accept="application/pdf" required>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+</body>
+</html>
